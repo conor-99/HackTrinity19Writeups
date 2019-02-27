@@ -535,3 +535,5 @@ I'm confident that with another day or so of work I would've been able to solve 
 ## Conclusion
 
 While I was disappointed that I didn't manage to solve all of the problems I was still relatively pleased with my score and position on the leaderboard. It was my first attempt at this sort of thing so hopefully with some practice I'll be able to do better next year!
+
+![Leaderboard](images/25_ldr_1.png)
