@@ -711,6 +711,10 @@ If we enter the serial key the program opens Doom in our browser. Upon starting 
 
 There doesn't seem to be a flag hidden anywhere in the game's menu so let's try and get the archive for the game itself. The page that was opened in the browser contains a base64 encoded zip archive. We can convert and extract it.
 
+Inside of the extracted archive there is one thing that stands out: there're two `.wad` files instead of just one. To get at the data inside we'll need to download [WadExt](https://github.com/coelckers/wadext/releases/tag/1.0). Use WadExt to extract the files from both `wad`s and inside on of them we'll find our flag hidden in three images:
+
+![Denovo 3](images/denovo3_5.png)
+
 ## Unsolved Problems
 
 Unfortunately I didn't manage to solve *Piconvert*, *Trinity Ball 2*, *PHPOurAdmin* or *Denovo 4*.
