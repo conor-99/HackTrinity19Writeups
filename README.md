@@ -622,9 +622,94 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-This was a tough one.
+This was a tough one. I spent a long time trying to solve this one and - due to the amount of different methods I tried before finding the correct approach - it would too cumbersome to document every incorrect step I took. Instead I'm just going to describe the correct steps without detailing the many tangents I went down and mistakes I made.
 
-...
+Disassembling the binary with `objdump` reveals that there is initially a method called `denovo_layer0` which uses the serial key to decrypt (using [RC4](https://en.wikipedia.org/wiki/RC4)) another layer of code - what happens then is currently a mystery.
+
+![Denovo 3](images/denovo3_1.png)
+
+If we run `strace ./denovo_v3` and then enter a serial key we discover something very interesting:
+
+![Denovo 3](images/denovo3_2.png)
+
+Looking at the call to `memcpy` shows us that the program might be checking to see if the first two characters of the serial key are correct before moving on.
+
+In order to test this hypothesis we can write a Python script to brute force the first two characters of the key:
+
+```python
+import string
+
+a = string.ascii_uppercase
+c = "python -c 'print \"%s%sXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX\"' > x && ltrace ./denovo_v3 < x\n"
+
+with open("command", "w+") as f:
+	for x in a:
+		for y in a:
+			f.write(c % (x, y))
+```
+
+We can run the file and output the results to a file like so: `command > out 2>&1`. Upon inspection we can find that when the serial key begins with `BY` the following line is output: `Couldn't load ELF object /proc/self/fd/3: No such file or directory`. This doesn't occur for any other input - however this isn't much to go on. Let's run `strace` instead and compare the difference in outputs between `BY` and `XX`.
+
+For `BY` these lines are both printed at some point:
+`openat(AT_FDCWD, "/dev/shm/denovo_18588_layer1", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 3`
+`openat(AT_FDCWD, "/dev/shm/denovo_18588_layer2", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 4`
+
+But for `XX` only this line is printed:
+`openat(AT_FDCWD, "/dev/shm/denovo_18588_layer1", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 3`
+
+We know have a way to detect when each two character pair is correct. We can try and write a Python script to generate the key:
+
+```python
+import os, string
+
+alphabet = string.ascii_uppercase
+pairs = [(x + y) for x in alphabet for y in alphabet]
+
+def keygen():
+
+	key = ""
+	suffix = "XXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX"
+
+	layer = 1
+
+	while layer <= 15:
+		nextChars = getNextChars(key, suffix, layer)
+		if nextChars == "error": return "error"
+		key += nextChars
+		suffix = suffix[2:]
+		layer += 1
+
+	return key
+
+def getNextChars(key, suffix, layer):
+
+	success = "layer" + str(layer + 1)
+	
+	for pair in pairs:
+		test = key + pair + suffix
+		output = testKey(test)
+		if success in output: return pair
+
+	return "error"
+
+def testKey(key):
+	cmd = "python -c 'print \"%s\"' > x && strace ./denovo_v3 < x 2>&1\n" % key
+	return "".join(os.popen(cmd).readlines())
+
+print keygen()
+```
+
+This takes quite a while to run and when it finally reaches the last layer ... it stops working. If we run an strace and manually enter the characters of the key we'd managed to decode so far we can see that it looks for `app` not `layer15`.
+
+![Denovo 3](images/denovo3_3.png)
+
+If we modify the first Python script to test each combination of the last two characters and search for `app` in the output we'll be able to find the serial key: `BYOZXY-LTDBTA-MQDVVF-OJXJFQ-KVLQEZ`.
+
+If we enter the serial key the program opens Doom in our browser. Upon starting the game we can see that the menu image has been modified:
+
+![Denovo 3](images/denovo3_3.png)
+
+There doesn't seem to be a flag hidden anywhere in the game's menu so let's try and get the archive for the game itself. The page that was opened in the browser contains a base64 encoded zip archive. We can convert and extract it.
 
 ## Unsolved Problems
 
