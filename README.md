@@ -552,7 +552,7 @@ Using the *"SSRF"* hint, as well as the fact that the forum uses phpBB I did a b
 
 If we create an account via the forum and go to our profile page we can see that the forum allows us to specify a remote avatar:
 
-![Book of Kells 2](images/booksofkells2.png)
+![Book of Kells 2](images/bookofkells2.png)
 
 I created a web server that contained a page with the following PHP code:
 
@@ -617,4 +617,4 @@ I'm confident that with another day or so of work I would've been able to solve 
 
 While I was disappointed that I didn't manage to solve all of the problems I was still relatively pleased with my score and position on the leaderboard. It was my first attempt at this sort of thing so hopefully with some practice I'll be able to do better next year!
 
-![Leaderboard](images/25_ldr_1.png)
+![Leaderboard](images/leaderboard.png)
