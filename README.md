@@ -155,7 +155,7 @@ The title of the file is:
 
 `SGFja1RyaW5pdHl7MXRzX24wdF9qVXNUX2FiMHV0X3RoM192MWRlMH0K`
 
-If we run it through a base64 decoder out pops our flag:
+If we run it through a [base64 decoder](https://www.base64decode.org/) out pops our flag:
 
 `HackTrinity{1ts_n0t_jUsT_ab0ut_th3_v1de0}`
 
