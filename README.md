@@ -31,28 +31,42 @@ Here are some *(brief)* writeups for the challenges I managed to solve:
 
 ## Welcome to Hack Trinity
 
-Topic(s) | Points
----------|-------
-`intro` | `50`
-
-#### Challenge:
-If you've never played a Capture-The-Flag competition before, worry not!
-
-The aim of the game is to find a string of text called a flag
-
-Usually the flag will be in the form `HackTrinity{}`, but sometimes it can be a different piece of text
-
-To receive a free 50 points, enter `HackTrinity{well_that_was_a_freebie}` in the box below, and click Check.
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`intro` | `50` | Very Easy
 
 
+> If you've never played a Capture-The-Flag competition before, worry not!
+
+> The aim of the game is to find a string of text called a flag
+
+> Usually the flag will be in the form `HackTrinity{}`, but sometimes it can be a different piece of text
+
+> To receive a free 50 points, enter `HackTrinity{well_that_was_a_freebie}` in the box below, and click Check.
+
+Simple enough. Free points.
 
 ## RTFR
 
-...
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`intro` | `75` | Very Easy
+
+> Oooh, we Trinity students love our rules and procedures.
+
+> We love them so much we included a flag in the rules for this competition. Can you find it?
+
+Another simple one - no need for an explanation.
 
 ## Say no to phishing
 
-...
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`misc` | `77` | Very Easy
+
+> What's our real Twitter handle?
+
+The last of the no-effort problems: [HackTrinityCTF](https://twitter.com/HackTrinityCTF).
 
 ## 
 
