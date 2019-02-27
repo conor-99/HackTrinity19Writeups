@@ -609,7 +609,7 @@ Unfortunately I didn't manage to solve *Piconvert*, *Trinity Ball 2*, *PHPOurAdm
 
 For *Piconvert* I spent a long time trying to implement a reverse shell by exploiting the ImageTragick vulnerability. However, while I could get the exploit to work in simple ways, I wasn't able to get the reverse shell to connect :(
 
-For *Denovo 4* I used a tool called sysdig as a workaround for not being able to debug the program itself (using gdb, ltrace, etc). I spent a few hours trying to make heads or tails of the data log and erroneously thought I'd found the serial key. The one I found began with "AHACRY-BB..." but didn't work, sadly.
+For *Denovo 4* I used a tool called sysdig as a workaround for not being able to debug the program itself (using gdb, ltrace, etc). I spent a few hours trying to make heads or tails of the data log and erroneously thought I'd found the serial key. The one I found began with *"AHACRY-BB..."* but didn't work, sadly.
 
 I'm confident that with another day or so of work I would've been able to solve a few of them - but oh well.
 
