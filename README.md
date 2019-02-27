@@ -246,7 +246,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-**Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately.**
+**_Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately._**
 
 If we install OpenVPN, download the config file and follow the setup instructions closely then we should be able to get connected easily enough.
 
@@ -294,7 +294,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-**Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately.**
+**_Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately._**
 
 This is another OpenVPN challenge so we can just repeat the steps from *Welcome* when setting up.
 
@@ -452,7 +452,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-**Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately.**
+**_Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately._**
 
 We setup OpenVPN as before and start scanning with nmap. There are two additional hosts up.
 
@@ -595,7 +595,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-**Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately.**
+**_Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately._**
 
 Once again we carry out the standard OpenVPN setup and run an nmap scan. If we visit the available host we'll se that's it's the public IP of a router.
 If we run a full nmap port scan: `nmap -v -p-` we'll find a `uPnP` port that's open.
