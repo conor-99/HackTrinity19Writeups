@@ -112,11 +112,13 @@ We know that every seventh character in the serial key is a hyphen as they are i
 
 All that was left to do was throw together a quick Python script and decode the key:
 
-	k = "\x??\x??\"
-	o = ""
-	for c in k:
-		out += c << 1
-	print o
+```python
+k = "\x00\x00"
+o = ""
+for c in k:
+	out += c << 1
+print o
+```
 
 This gives us `//here`. If we execute the program and enter this key we receive our flag:
 
@@ -209,11 +211,13 @@ We can add an item and then proceed to the checkout. We won't be given our flag,
 
 By taking a look at the page's source code we can see that the following GET request is made when we purchase a ticket:
 
-	fetch("addItemToBasket.php?id=" + id).then(function(res) {
-		res.json().then(function(json) {
-			refreshBasket();
-		})
-	});
+```javascript
+fetch("addItemToBasket.php?id=" + id).then(function(res) {
+	res.json().then(function(json) {
+		refreshBasket();
+	})
+});
+```
 
 If we try and make the following request `https://trinityball1.hacktrinity.me/addItemToBasket.php?id=2` then we'll be told our request is invalid. But if we replace the `2` with a `1` and make the same request multiple times then we'll be able to add as many tickets as we want to our basket.
 
