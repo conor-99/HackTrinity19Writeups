@@ -189,7 +189,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 Visiting the website gives us this Zcash address: `t1gok64PM8APnrSWXgBxboqHrszFYqP5v3L`.
 
-I looked it up on a [Zcash blockchain explorer](https://explorer.zcha.in/) and found an account with only one or two transactions. If we follow their transactions we'll find another account or two with only a handful of transactions. Eventually we reach a account that is entirely barren, if we Google their Zcash address we'll find a blog containing the culprit's full name:
+I looked it up on a [Zcash blockchain explorer](https://explorer.zcha.in/) and found an account with only one or two transactions. If we follow their transactions we'll find another account or two with only a handful of transactions. Eventually we'll reach an account that is entirely barren, if we Google their Zcash address we'll find a blog containing the culprit's full name:
 
 ![LUAS](images/luas.png)
 
@@ -600,6 +600,8 @@ Topic(s) | Points | Difficulty (in my opinion)
 	Both binaries below are generated from the same code, one is built for ARM platforms and one for x86-64. You can choose whichever you're most comfortable with :)
 
 #### Solution:
+
+This was a tough one.
 
 ...
 
