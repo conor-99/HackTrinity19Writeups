@@ -246,22 +246,17 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
+**Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately.**
+
 If we install OpenVPN, download the config file and follow the setup instructions closely then we should be able to get connected easily enough.
 
-We can find the IP we need to scan as well as our allocated subnet by running `ifconfig`:
-
-`img here`
+We can find the IP we need to scan as well as our allocated subnet by running `ifconfig`.
 
 Using a [subnet calculator](http://www.subnet-calculator.com/) we can convert the `255.255.255.240` into `28` mask  bits.
 
-Now we can run our scan using nmap `nmap -v -sn 10.0.0.0/28`:
+Now we can run our scan using nmap `nmap -v -sn ?.?.?.?/28`:
 
-`img here`
-
-If we visit the resulting IP we'll find a web page containing our flag:
-
-`flag`
-
+If we visit the resulting IP we'll find a web page containing our flag.
 
 ### Dust in your eyes?
 
@@ -299,11 +294,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
+**Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately.**
+
 This is another OpenVPN challenge so we can just repeat the steps from *Welcome* when setting up.
 
-The challenge statement made it clear that we'd need to listen to the traffic on our VPN interface. If we open up Wireshark and start listening to the `tap0` interface set up by OpenVPN we'll quickly find our flag:
-
-`img here`
+The challenge statement made it clear that we'd need to listen to the traffic on our VPN interface. If we open up Wireshark and start listening to the `tap0` interface set up by OpenVPN we'll quickly find our flag.
 
 ### Who Am I?
 
@@ -457,21 +452,17 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-We setup OpenVPN as before and start scanning with nmap. There are two additional hosts up:
+**Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately.**
 
-`img here`
+We setup OpenVPN as before and start scanning with nmap. There are two additional hosts up.
 
 Based on the problem statement, as well as the suggestive number of hosts, we can probably assume we've got to implement some sort of man-in-the-middle attack.
 
 I hadn't a clue how to do this so I did some Googling and found out about Ettercap. It was already installed on my Kali machine so I opened it up.
 
-to-do
+We start sniffing on `tap0` and target the two aforementioned hosts.
 
-...
-
-Once we've got Ettercap running we can open up Wireshark and begin listening. Sure enough, there's our flag, as well as a conversation that I spent way too much time listening to:
-
-`img here`
+Once we've got Ettercap running we can open up Wireshark and begin listening. Sure enough, there's our flag, as well as a conversation that I spent way too much time listening to.
 
 ### Zippy
 
@@ -604,9 +595,14 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-Once again we carry out the standard OpenVPN setup and run an nmap scan.
+**Note: unfortunately HackTrinity appear to have closed down the networking services for this challenge so I can't actually replicate my methods. The writeups for these problems are lacking, unfortunately.**
 
-...
+Once again we carry out the standard OpenVPN setup and run an nmap scan. If we visit the available host we'll se that's it's the public IP of a router.
+If we run a full nmap port scan: `nmap -v -p-` we'll find a `uPnP` port that's open.
+
+We can use cURL to send a SOAP request that will map port 80 of the only device connected to the router's LAN to a port that is unused by the router. Then, if connect to that port we'll be brought to the web server of the device - this web server contains the flag.
+
+**To-do:** add SOAP request that was used.
 
 ### Denovo 3
 
@@ -711,7 +707,7 @@ If we enter the serial key the program opens Doom in our browser. Upon starting 
 
 There doesn't seem to be a flag hidden anywhere in the game's menu so let's try and get the archive for the game itself. The page that was opened in the browser contains a base64 encoded zip archive. We can convert and extract it.
 
-Inside of the extracted archive there is one thing that stands out: there're two `.wad` files instead of just one. To get at the data inside we'll need to download [WadExt](https://github.com/coelckers/wadext/releases/tag/1.0). Use WadExt to extract the files from both `wad`s and inside on of them we'll find our flag hidden in three images:
+Inside of the extracted archive there is one thing that stands out: there're two `.wad` files instead of just one. To get at the data inside we'll need to download [WadExt](https://github.com/coelckers/wadext/releases/tag/1.0). Use WadExt to extract the files from both `.wad`s and inside on of them we'll find our flag hidden in three images:
 
 ![Denovo 3](images/denovo3_5.png)
 
