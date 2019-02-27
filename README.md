@@ -142,7 +142,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-The reason I've given this challenge a difficulty of 'medium' rather than 'easy' is because of the sheer amount of time I spent trying to use steganography and other techniques to search for the flag.
+The reason I've given this challenge a difficulty of *'medium'* rather than *'easy'* is because of the sheer amount of time I spent trying to use steganography and other techniques to search for the flag.
 
 I extracted strings, looked through metadata, put it through an MKV decoder, ran a `binwalk` for hidden files, ran colour plane analysis using steganography tools, etc ...
 
@@ -296,7 +296,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-This is another OpenVPN challenge so we can just repeat the steps from 'Welcome' when setting up.
+This is another OpenVPN challenge so we can just repeat the steps from *Welcome* when setting up.
 
 The challenge statement made it clear that we'd need to listen to the traffic on our VPN interface. If we open up Wireshark and start listening to the `tap0` interface set up by OpenVPN we'll quickly find our flag:
 
@@ -352,7 +352,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-Once again, I downloaded the x86-64 version. I repeated the steps from 'Denovo 1' and found the following data in the `hexdump` output:
+Once again, I downloaded the x86-64 version. I repeated the steps from *Denovo 1* and found the following data in the `hexdump` output:
 
 `img here`
 
@@ -523,7 +523,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 I spent a long time trying to mount the image and bricked a USB in the process - I didn't get anywhere with that endeavour.
 
-Then I ran the following command `strings disk.img | awk 'length($0) > 10'` and searched the output for the word 'flag'.
+Then I ran the following command `strings disk.img | awk 'length($0) > 10'` and searched the output for the word *"flag"*.
 
 I found this: `flag.png`!
 
@@ -548,7 +548,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-Using the 'SSRF' hint, as well as the fact that the forum uses phpBB I did a bit of research to see if there were any big vulnerabilities out there: [bingo](https://vuldb.com/?id.111233)!
+Using the *"SSRF"* hint, as well as the fact that the forum uses phpBB I did a bit of research to see if there were any big vulnerabilities out there: [bingo](https://vuldb.com/?id.111233)!
 
 If we create an account via the forum and go to our profile page we can see that the forum allows us to specify a remote avatar:
 
@@ -605,11 +605,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 ## Unsolved Problems
 
-Unfortunately I didn't manage to solve 'Piconvert', 'Trinity Ball 2', 'PHPOurAdmin' or 'Denovo 4'.
+Unfortunately I didn't manage to solve *Piconvert*, *Trinity Ball 2*, *PHPOurAdmin* or *Denovo 4*.
 
-For 'Piconvert' I spent a long time trying to implement a reverse shell by exploiting the ImageTragick vulnerability. However, while I could get the exploit to work in simple ways, I wasn't able to get the reverse shell to connect :(
+For *Piconvert* I spent a long time trying to implement a reverse shell by exploiting the ImageTragick vulnerability. However, while I could get the exploit to work in simple ways, I wasn't able to get the reverse shell to connect :(
 
-For 'Denovo 4' I used a tool called sysdig as a workaround for not being able to debug the program itself (using gdb, ltrace, etc). I spent a few hours trying to make heads or tails of the data log and erroneously thought I'd found the serial key. The one I found began with "AHACRY-BB..." but didn't work sadly.
+For *Denovo 4* I used a tool called sysdig as a workaround for not being able to debug the program itself (using gdb, ltrace, etc). I spent a few hours trying to make heads or tails of the data log and erroneously thought I'd found the serial key. The one I found began with "AHACRY-BB..." but didn't work, sadly.
 
 I'm confident that with another day or so of work I would've been able to solve a few of them - but oh well.
 
