@@ -2,7 +2,7 @@
 
 I had a lot of fun participating in the [Hack Trinity '19 CTF](https://hacktrinity.me/) competition this month. It was  my first time every trying anything like this so I wasn't at all prepared and I had to learn a lot of new skills on-the-fly. Nonetheless, I was fairly pleased with my result and I'll definitely be competing again next here!
 
-Here are some *(brief)* writeups for the challenges I managed to solve:
+Here are some brief writeups for the challenges I managed to solve:
 
 * [Welcome to Hack Trinity](#welcome-to-hack-trinity)
 * [RTFR](#rtfr)
