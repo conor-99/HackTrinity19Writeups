@@ -483,3 +483,48 @@ Topic(s) | Points | Difficulty (in my opinion)
 #### Solution
 
 This was one was really fun!
+
+## Call me maybe
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`phreaking` | `217` | Medium
+
+#### Challenge
+
+	Miers Porgan has been caught hacking into voicemails again.
+	Can you figure out how he got into mine?
+	+353 76 680 3900 
+
+#### Solution
+
+To solve this one you simply needed to use a VoIP app to call the provided number. I used Skype with a free trial. You'll be asked to enter a two-digit voicemail password and will be able to get the flag once you've entered the correct one via trial-and-error:
+
+`12986876283467881467242`
+
+## Not Forgotten
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`forensics` | `231` | Hard
+
+#### Challenge
+
+	A friend of mine keeps a portable Linux install on his USB drive.
+	I passed by the other day and saw a flag on his screen, which he quickly alt-tabbed away from.
+	Since I really want that flag, I grabbed the drive and made an image of it while he was off at lunch, but I can't seem to find any sign of a flag. Can you help?
+
+#### Solution
+
+
+## Unsolved Problems
+
+Unfortunately I didn't manage to solve 'Piconvert', 'Trinity Ball 2', 'PHPOurAdmin' or 'Denovo 4'.
+
+For 'Piconvert' I spent a long time trying to implement a reverse shell by exploiting the ImageTragick vulnerability. However, while I could get the exploit to work in simple ways, I wasn't able to get the reverse shell to connect :(
+
+For 'Denovo 4' I used a tool called sysdig as a workaround for not being able to debug the program itself (using gdb, ltrace, etc). I spent a few hours trying to make heads or tails of the data log and erroneously thought I'd found the serial key. The one I found began with "AHACRY-BB..." but didn't work sadly.
+
+## Conclusion
+
+While I was disappointed that I didn't manage to solve all of the problems I was still relatively pleased with my score and position on the leaderboard. It was my first attempt at this sort of thing so hopefully with some practice I'll be able to do better next year!
