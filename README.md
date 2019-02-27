@@ -525,6 +525,8 @@ For 'Piconvert' I spent a long time trying to implement a reverse shell by explo
 
 For 'Denovo 4' I used a tool called sysdig as a workaround for not being able to debug the program itself (using gdb, ltrace, etc). I spent a few hours trying to make heads or tails of the data log and erroneously thought I'd found the serial key. The one I found began with "AHACRY-BB..." but didn't work sadly.
 
+I'm confident that with another day or so of work I would've been able to solve a few of them - but oh well.
+
 ## Conclusion
 
 While I was disappointed that I didn't manage to solve all of the problems I was still relatively pleased with my score and position on the leaderboard. It was my first attempt at this sort of thing so hopefully with some practice I'll be able to do better next year!
