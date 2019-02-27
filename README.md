@@ -35,7 +35,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `intro` | `50` | Very Easy
 
-#### Challenge
+#### Challenge:
 
 > If you've never played a Capture-The-Flag competition before, worry not!
 
@@ -45,7 +45,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 > To receive a free 50 points, enter `HackTrinity{well_that_was_a_freebie}` in the box below, and click Check.
 
-#### Solution
+#### Solution:
 
 Simple enough. Free points.
 
@@ -55,13 +55,13 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `intro` | `75` | Very Easy
 
-#### Challenge
+#### Challenge:
 
 > Oooh, we Trinity students love our rules and procedures.
 
 > We love them so much we included a flag in the rules for this competition. Can you find it?
 
-#### Solution
+#### Solution:
 
 Another simple one - no need for an explanation here.
 
@@ -71,9 +71,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `misc` | `77` | Very Easy
 
+#### Challenge:
+
 > What's our real Twitter handle?
 
-#### Solution
+#### Solution:
 
 The last of the "zero-effort" problems, kind of.
 
@@ -83,7 +85,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `reversing` | `100` | Easy
 
-#### Solution
+#### Challenge:
 
 > Denovo is a new startup which develops DRM for games.
 
@@ -93,15 +95,15 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 > Both binaries below are generated from the same code, one is built for ARM platforms and one for x86-64. You can choose whichever you're most comfortable with :)
 
-#### Challenge
+#### Solution:
 
 On to the real problems. I chose the x86-64 binary because I can execute it on my machine.
 
-I quickly executed it to see how the program worked.
+I quickly executed it to see how the program worked:
 
 // img here
 
-I then extracted all of the relatively long strings from the binary using this command:
+I then extracted all of the relatively long strings from the binary using the following command:
 
 `strings denovo_v1 | awk 'length($0) > 10'`
 
@@ -131,15 +133,15 @@ This gives us `//here`. If we execute the program and enter this key we receive 
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`forensice` | `100` | Medium
+`forensics` | `100` | Medium
 
-#### Challenge
+#### Challenge:
 
 > TCD Disinformation Services have been hard at work making sure that any flag-containing media is fully censored.
 
 > Apparently one slipped through... Can you find it?
 
-#### Solution
+#### Solution:
 
 The reason I've given this challenge a difficulty of 'medium' rather than 'easy' is because of the sheer amount of time I spent trying to use steganography and other techniques to search for the flag.
 
@@ -149,13 +151,13 @@ Turns out the answer was right in front of me the whole time.
 
 The title of the file is:
 
-`...`
+`SGFja1RyaW5pdHl7MXRzX24wdF9qVXNUX2FiMHV0X3RoM192MWRlMH0K`
 
 If we run it through a base64 decoder out pops our flag:
 
-`...`
+`HackTrinity{1ts_n0t_jUsT_ab0ut_th3_v1de0}`
 
-This challenge too me way longer than it should have.
+This challenge took me way longer than it should have ...
 
 ## Book of Kells 1
 
@@ -163,17 +165,17 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `darkweb/recon` | `113` | Very Easy
 
-#### Challenge
+#### Challenge:
 
 > Oh noes! Someone's stole the Book of Kells and is auctioning it off on the Dark Web!
 
 > Download the Tor Browser and visit the auction site at http://uxpkyayer253dtcl.onion to find out who's been making bids on this Trinity treasure :O
 
-#### Solution
+#### Solution:
 
 This was a simple one. If we visit the hidden service and go to the only thread on the forum we'll find the flag sitting at the bottom:
 
-`img here`
+![Forum](images/03_bok_1.png)
 
 ## LUAS
 
@@ -181,15 +183,19 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `blockchain/recon` | `114` | Easy
 
-#### Challenge
+#### Challenge:
 
  > The Luas website has been hacked again, and a threatening ransom message posted. Can you track down the culprit's real full name? https://luas.hacktrinity.me 
 
-#### Solution
+#### Solution:
 
 Visiting the website gives us this Zcash address: `t1gok64PM8APnrSWXgBxboqHrszFYqP5v3L`.
 
-I looked it up on a [Zcash blockchain explorer](https://explorer.zcha.in/) and found an account with only one or two transactions. If we follow their transactions we'll find another account or two with only a handful of transactions. Eventually we reach a account that isn't entirely barren, if we Google their Zcash address we'll find a blog containing the culprit's full name - that's the flag!
+I looked it up on a [Zcash blockchain explorer](https://explorer.zcha.in/) and found an account with only one or two transactions. If we follow their transactions we'll find another account or two with only a handful of transactions. Eventually we reach a account that isn't entirely barren, if we Google their Zcash address we'll find a blog containing the culprit's full name:
+
+`img ehre`
+
+And that's our flag!
 
 ## Trinity Ball 1
 
@@ -197,12 +203,30 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `web` | `119` | Very Easy
 
-#### Challenge
+#### Challenge:
 
 > Tickets for Trinity Ball have finally been released! Due to high demand, the organisers have limited tickets to one per person. Can you bypass the restrictions and checkout two tickets at once?
 
 > https://trinityball1.hacktrinity.me
 
-#### Solution
+#### Solution:
 
-...
+If we visit the page and click the button we'll be taken to an order page:
+
+![Order page](images/05_tb1_1.png)
+
+We can add an item and then proceed to the checkout. We won't be given our flag, however.
+
+By taking a look at the page's source code we can see that the following GET request is made when we purchase a ticket:
+
+	fetch("addItemToBasket.php?id=" + id).then(function(res) {
+		res.json().then(function(json) {
+			refreshBasket();
+		})
+	});
+
+If we try and make the following request `https://trinityball1.hacktrinity.me/addItemToBasket.php?id=2` then we'll be told our request is invalid. But if we replace the `2` with a `1` and make the same request multiple times then we'll be able to add as many tickets as we want to our basket.
+
+If we proceed to the checkout we'll be awarded our flag:
+
+`HackTrinity{client_side_is_best_side}`
