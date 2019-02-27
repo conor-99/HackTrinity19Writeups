@@ -173,7 +173,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 This was a simple one. If we visit the hidden service and go to the only thread on the forum we'll find the flag sitting at the bottom:
 
-![Forum](images/03_bok_1.png)
+![Book of Kells 1](images/bookofkells1.png)
 
 ### LUAS
 
@@ -189,9 +189,9 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 Visiting the website gives us this Zcash address: `t1gok64PM8APnrSWXgBxboqHrszFYqP5v3L`.
 
-I looked it up on a [Zcash blockchain explorer](https://explorer.zcha.in/) and found an account with only one or two transactions. If we follow their transactions we'll find another account or two with only a handful of transactions. Eventually we reach a account that isn't entirely barren, if we Google their Zcash address we'll find a blog containing the culprit's full name:
+I looked it up on a [Zcash blockchain explorer](https://explorer.zcha.in/) and found an account with only one or two transactions. If we follow their transactions we'll find another account or two with only a handful of transactions. Eventually we reach a account that is entirely barren, if we Google their Zcash address we'll find a blog containing the culprit's full name:
 
-`img ehre`
+![LUAS](images/luas.png)
 
 And that's our flag!
 
@@ -210,7 +210,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 If we visit the page and click the button we'll be taken to an order page:
 
-![Order page](images/05_tb1_1.png)
+![Trinity Ball 1](images/trinityball1.png)
 
 We can add an item and then proceed to the checkout. We won't be given our flag, however.
 
@@ -334,7 +334,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 The attached file was of the type `cia`. Since I already had the 3DS emulator Citra installed on my laptop this gave the entire thing away. By opening the file in Citra we can get our flag:
 
-![Lenny](images/11_brw_1.png)
+![Brew](images/brew.png)
 
 This challenge was quite fun!
 
@@ -440,7 +440,7 @@ We setup OpenVPN as before and start scanning with nmap. There are two additiona
 
 Based on the problem statement, as well as the suggestive number of hosts, we can probably assume we've got to implement some sort of man-in-the-middle attack.
 
-I hadn't a clue how to do this so I did some Googling and found out about Ettercap. It was already installed on my Kali maching so I opened it up.
+I hadn't a clue how to do this so I did some Googling and found out about Ettercap. It was already installed on my Kali machine so I opened it up.
 
 to-do
 
@@ -527,7 +527,7 @@ Then I ran the following command `strings disk.img | awk 'length($0) > 10'` and 
 
 I found this: `flag.png`!
 
-I used the forensice tool Foremost to extract all png files from the disk image: `foremost -t png -i disk.img`
+I used the forensics tool Foremost to extract all `.png` files from the disk image: `foremost -t png -i disk.img`
 
 In the output folder was the image containing our flag:
 
@@ -552,7 +552,7 @@ Using the 'SSRF' hint, as well as the fact that the forum uses phpBB I did a bit
 
 If we create an account via the forum and go to our profile page we can see that the forum allows us to specify a remote avatar:
 
-![Remote avatar](images/20_bok_2.png)
+![Book of Kells 2](images/booksofkells2.png)
 
 I created a web server that contained a page with the following PHP code:
 
@@ -567,7 +567,9 @@ I created a web server that contained a page with the following PHP code:
 ?>
 ```
 
-If we make this URL look like an image file http://myserver.com/log.php?i=image.png` and then set it as our remote avatar then we'll find the hidden service's IP address in the file `log.txt`.
+If we make this URL look like an image file http://myserver.com/log.php?i=image.png` and then set it as our remote avatar then we'll find the hidden service's IP address in the file `log.txt`:
+
+`95.179.146.250`
 
 ### Nat a flag
 
