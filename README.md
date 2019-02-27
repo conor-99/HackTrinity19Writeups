@@ -210,7 +210,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 If we visit the page and click the button we'll be taken to an order page:
 
-![Trinity Ball 1](images/trinityball1.png)
+![Trinity Ball 1](images/trinityball.png)
 
 We can add an item and then proceed to the checkout. We won't be given our flag, however.
 
