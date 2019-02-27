@@ -4,32 +4,37 @@ I had a lot of fun participating in the [Hack Trinity '19 CTF](https://hacktrini
 
 Here are some brief writeups for the challenges I managed to solve:
 
-* [Welcome to Hack Trinity](#welcome-to-hack-trinity)
-* [RTFR](#rtfr)
-* [Say no to phishing](#say-no-to-phishing)
-* [Denovo 1](#denovo-1)
-* [Bunny](#bunny)
-* [Book of Kells 1](#book-of-kells-1)
-* [LUAS](#luas)
-* [Trinity Ball 1](#trinity-ball-1)
-* [Welcome](#welcome)
-* [Dust in your eyes?](#dust-in-your-eyes)
-* [GNU](#gnu)
-* [Who Am I?](#who-am-i)
-* [Brew](#brew)
-* [Denovo 2](#denovo-2)
-* [Turing-Lang](#turing-lang)
-* [Big Chungus+3](#big-chungus)
-* [Wise](#wise)
-* [Zippy](#zippy)
-* [Flow](#flow)
-* [Call me maybe](#call-me-maybe)
-* [Not Forgotten](#not-forgotten)
-* [Book of Kells 2](#book-of-kells-2)
-* [Nat a flag](#nat-a-flag)
-* [Denovo 3](#denovo-3)
+* [Solved Problems](#solved-problems)
+	* [Welcome to Hack Trinity](#welcome-to-hack-trinity)
+	* [RTFR](#rtfr)
+	* [Say no to phishing](#say-no-to-phishing)
+	* [Denovo 1](#denovo-1)
+	* [Bunny](#bunny)
+	* [Book of Kells 1](#book-of-kells-1)
+	* [LUAS](#luas)
+	* [Trinity Ball 1](#trinity-ball-1)
+	* [Welcome](#welcome)
+	* [Dust in your eyes?](#dust-in-your-eyes)
+	* [GNU](#gnu)
+	* [Who Am I?](#who-am-i)
+	* [Brew](#brew)
+	* [Denovo 2](#denovo-2)
+	* [Turing-Lang](#turing-lang)
+	* [Big Chungus+3](#big-chungus)
+	* [Wise](#wise)
+	* [Zippy](#zippy)
+	* [Flow](#flow)
+	* [Call me maybe](#call-me-maybe)
+	* [Not Forgotten](#not-forgotten)
+	* [Book of Kells 2](#book-of-kells-2)
+	* [Nat a flag](#nat-a-flag)
+	* [Denovo 3](#denovo-3)
+* [Unsolved Problems](#unsolved-problems)
+* [Conclusion](#conclusion)
 
-## Welcome to Hack Trinity
+## Solved Problems
+
+### Welcome to Hack Trinity
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -46,7 +51,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 Simple enough. Free points.
 
-## RTFR
+### RTFR
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -61,7 +66,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 Another simple one - no need for an explanation here.
 
-## Say no to phishing
+### Say no to phishing
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -75,7 +80,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 The last of the "zero-effort" problems, kind of.
 
-##  Denovo 1
+###  Denovo 1
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -124,7 +129,7 @@ This gives us `//here`. If we execute the program and enter this key we receive 
 
 `here`
 
-## Bunny
+### Bunny
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -153,7 +158,7 @@ If we run it through a base64 decoder out pops our flag:
 
 This challenge took me way longer than it should have ...
 
-## Book of Kells 1
+### Book of Kells 1
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -170,7 +175,7 @@ This was a simple one. If we visit the hidden service and go to the only thread 
 
 ![Forum](images/03_bok_1.png)
 
-## LUAS
+### LUAS
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -190,7 +195,7 @@ I looked it up on a [Zcash blockchain explorer](https://explorer.zcha.in/) and f
 
 And that's our flag!
 
-## Trinity Ball 1
+### Trinity Ball 1
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -225,7 +230,7 @@ If we proceed to the checkout we'll be awarded our flag:
 
 `HackTrinity{client_side_is_best_side}`
 
-## Welcome
+### Welcome
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -255,7 +260,7 @@ If we visit the resulting IP we'll find a web page containing our flag:
 `flag`
 
 
-## Dust in your eyes?
+### Dust in your eyes?
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -279,7 +284,7 @@ If we paste in the text from the file and click decode we get our flag:
 
 `flag`
 
-## GNU
+### GNU
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -314,7 +319,7 @@ Due to the hint, I spent quite a while trying to find the flag via Facebook (sin
 
 `img here`
 
-## Brew
+### Brew
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -333,7 +338,7 @@ The attached file was of the type `cia`. Since I already had the 3DS emulator Ci
 
 This challenge was quite fun!
 
-## Denovo 2
+### Denovo 2
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -353,7 +358,7 @@ Once again, I downloaded the x86-64 version. I repeated the steps from 'Denovo 1
 
 ... to-do
 
-## Turing-Lang
+### Turing-Lang
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -390,7 +395,7 @@ Which gives us:
 
 `HackTrinity{i_dont_know_lenny}`
 
-## Big Chungus+3
+### Big Chungus+3
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -416,7 +421,7 @@ Remove all whitespace and then run our code through an online compiler:
 
 `HackTrinity{TheseMemesAreSo0O0oLastMonth}`
 
-## Wise
+### Wise
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -445,7 +450,7 @@ Once we've got Ettercap running we can open up Wireshark and begin listening. Su
 
 `img here`
 
-## Zippy
+### Zippy
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -467,7 +472,7 @@ By changing the appropriate bytes in a hex editor we can fix the archive and ext
 
 `flag`
 
-## Flow
+### Flow
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -484,7 +489,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 This was one was really fun!
 
-## Call me maybe
+### Call me maybe
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -502,7 +507,7 @@ To solve this one you simply needed to use a VoIP app to call the provided numbe
 
 `12986876283467881467242`
 
-## Not Forgotten
+### Not Forgotten
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
