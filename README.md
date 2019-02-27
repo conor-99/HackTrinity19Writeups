@@ -707,7 +707,7 @@ If we modify the first Python script to test each combination of the last two ch
 
 If we enter the serial key the program opens Doom in our browser. Upon starting the game we can see that the menu image has been modified:
 
-![Denovo 3](images/denovo3_3.png)
+![Denovo 3](images/denovo3_4.png)
 
 There doesn't seem to be a flag hidden anywhere in the game's menu so let's try and get the archive for the game itself. The page that was opened in the browser contains a base64 encoded zip archive. We can convert and extract it.
 
