@@ -361,7 +361,30 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution
 
-The name Urban Turing must be a reference to Urban Müller - which means we're probably dealing with Brainfuck.
+The name Urban Turing must be a reference to Urban Müller - which means we're probably dealing with Brainfuck. Since we can assume that this program, when run, will print out the flag all we need to do is use a [Brainfuck text generator](https://copy.sh/brainfuck/text.html) to find out what our code *should* look like  and then begin matching and replacing characters. I entered "HackTrinity{" into the generator and got the following:
+
+`-[------->+<]>-.[--->++++<]>+ ...`
+
+Our challenge code looks like:
+
+`#/#######>&<\># /###>&&&&<\>& ...`
+
+We can replace make the following replacements:
+
+* `#` with `-`
+* `/` with `[`
+* `&` with `+`
+* `\` with `]`
+* ` ` with `.`
+* `<` and `>` remain the same
+
+The resulting code is:
+
+`-[------->+<]>-.[--->++++<]>+.++.++++++++.>-[--->+<]>-.-[--->+<]>+.---------.+++++.-----.+++++++++++.+++++.++.[->+++++<]>++.----------.+++++.+++++++++++.-.++++++.+[->+++<]>.++++++++++++.+++.+.++++++++.--[->+++<]>.+++++++++++++.-------.+++++++++..[--->+<]>-.++++.`
+
+Which gives us:
+
+`HackTrinity{i_dont_know_lenny}`
 
 ## Big Chungus+3
 
@@ -375,9 +398,19 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution
 
-Like the previous challenge, we're dealing with Brainfuck. We do another word replacement and run our code through an online compiler:
+Like the previous challenge, we're dealing with Brainfuck. We do another word replacement:
 
-`flag`
+* `chunga` with `-`
+* `fudd` with `[`
+* `big` with `>`
+* `karen` with `+`
+* `chungus` with `<`
+* `ricardo` with `]`
+* `chunky` with `.`
+
+Remove all whitespace and then run our code through an online compiler:
+
+`HackTrinity{TheseMemesAreSo0O0oLastMonth}`
 
 ## Wise
 
@@ -424,7 +457,7 @@ If we run a `binwalk` on the archive it doesn't look at all suspicious. If we ex
 
 I moved over to Windows and tried to run the WinRar recovery tool on the archive, but to no avail.
 
-After a bit of investigation I discovered that the header at the start of the archive was actually `00 .. 00`, the header for a `.jar` file, and not `00 .. 00`, the header for a `.zip` file!.
+After a bit of investigation I discovered that the header at the start of the archive was actually `00 .. 00`, the header for a `.jar` file, and not `00 .. 00`, the header for a `.zip` file!
 
 By changing the appropriate bytes in a hex editor we can fix the archive and extract our flag:
 
