@@ -657,10 +657,13 @@ with open("command", "w+") as f:
 We can run the file and output the results to a file like so: `command > out 2>&1`. Upon inspection we can find that when the serial key begins with `BY` the following line is output: `Couldn't load ELF object /proc/self/fd/3: No such file or directory`. This doesn't occur for any other input - however this isn't much to go on. Let's run `strace` instead and compare the difference in outputs between `BY` and `XX`.
 
 For `BY` these lines are both printed at some point:
+
 `openat(AT_FDCWD, "/dev/shm/denovo_18588_layer1", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 3`
+
 `openat(AT_FDCWD, "/dev/shm/denovo_18588_layer2", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 4`
 
 But for `XX` only this line is printed:
+
 `openat(AT_FDCWD, "/dev/shm/denovo_18588_layer1", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 3`
 
 We now have a way to detect when each two character pair is correct. We can try and write a Python script to generate the key:
