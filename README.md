@@ -634,7 +634,7 @@ Disassembling the binary with `objdump` reveals that there is initially a method
 
 ![Denovo 3](images/denovo3_1.png)
 
-If we run `strace ./denovo_v3` and then enter a serial key we discover something very interesting:
+If we run `ltrace ./denovo_v3` and then enter a serial key we discover something very interesting:
 
 ![Denovo 3](images/denovo3_2.png)
 
