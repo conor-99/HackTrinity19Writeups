@@ -495,7 +495,23 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-To-do.
+If we disassemble the binary that was provided we find a simple `main` function.
+
+![Flow](images/flow_1.png)
+
+It appears to load the input into an array of size `32` (`0x20`). Since the name of this challenge is *Flow* we're probably dealing with a buffer overflow exploit. I didn't know how to implement this exploit so I watched this [Computerphile video](https://www.youtube.com/watch?v=1S0aBV-Waeo) a couple of times. We need to pass in a certain number of `0x90`s (NOP instructions) followed by the address we want to jump to.
+
+We want to print out the flag so the address we're going to want to reach is `0x40001C56`:
+
+![Flow](images/flow_2.png)
+
+We need to make the address little-endian: `0x561C0040`.
+
+We can then experiment with different amounts of NOP instructions, starting at 32 and working our way upwards.
+
+The value that worked on the local machine was 40. We can then pass the following command into the netcat server and receive our flag:
+
+`python -c 'print "\x90"*40 + "\x56\x1c\x00\x40"'`
 
 ### Call me maybe
 
@@ -647,7 +663,7 @@ For `BY` these lines are both printed at some point:
 But for `XX` only this line is printed:
 `openat(AT_FDCWD, "/dev/shm/denovo_18588_layer1", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 3`
 
-We know have a way to detect when each two character pair is correct. We can try and write a Python script to generate the key:
+We now have a way to detect when each two character pair is correct. We can try and write a Python script to generate the key:
 
 ```python
 import os, string
