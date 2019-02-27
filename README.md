@@ -482,7 +482,7 @@ If we run a `binwalk` on the archive it doesn't look at all suspicious. If we ex
 
 I moved over to Windows and tried to run the WinRar recovery tool on the archive, but to no avail.
 
-After a bit of investigation I discovered that the header at the start of the archive was actually `50 4B 03 04 2D 00 00 00`, the header for a `.jar` file, and not `00 .. 00`, the header for a `.zip` file!
+After a bit of investigation I discovered that the header at the start of the archive was incorrect. (to-do)
 
 By changing the appropriate bytes in a hex editor we can fix the archive and extract our flag:
 
