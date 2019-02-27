@@ -302,7 +302,7 @@ The challenge statement made it clear that we'd need to listen to the traffic on
 
 `img here`
 
-## Who Am I?
+### Who Am I?
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
@@ -589,7 +589,7 @@ Once again we carry out the standard OpenVPN setup and run an nmap scan.
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`reversing` | `300` | ![Very Hard](https://img.shields.io/badge/-Very Hard-red.svg)
+`reversing` | `300` | ![Very Hard](https://img.shields.io/badge/-Very%20Hard-red.svg)
 
 #### Challenge:
 
