@@ -107,7 +107,7 @@ I then extracted all of the relatively long strings from the binary using the fo
 
 `strings denovo_v1 | awk 'length($0) > 10'`
 
-There were a number of strings relating to input and ouput such as `please enter your serial key`, etc.
+There were a number of strings relating to input and output such as `please enter your serial key`, etc.
 
 I ran a `hexdump` on the binary and found the start of the section relating to input and output:
 
