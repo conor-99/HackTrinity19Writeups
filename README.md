@@ -272,7 +272,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-If we open the file in Vim we can see a number of suspicious looking characters:
+If we open the file in a text editor we can see a number of suspicious looking characters:
 
 `img here`
 
@@ -332,7 +332,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-The attached file was of the type `cia`. Since I already had the 3DS emulator Citra installed on my laptop this gave the entire thing away. By opening the file in Citra we can get our flag:
+The attached file was of the type `cia`. Since I already had the 3DS emulator [Citra](https://citra-emu.org/) installed on my laptop this gave the entire thing away. By opening the file in Citra we can get our flag:
 
 ![Brew](images/brew.png)
 
@@ -370,7 +370,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-The name Urban Turing must be a reference to Urban Müller - which means we're probably dealing with Brainfuck. Since we can assume that this program, when run, will print out the flag all we need to do is use a [Brainfuck text generator](https://copy.sh/brainfuck/text.html) to find out what our code *should* look like  and then begin matching and replacing characters. I entered "HackTrinity{" into the generator and got the following:
+The name Urban Turing must be a reference to [Urban Müller](https://esolangs.org/wiki/Urban_M%C3%BCller) (and Alan Turing of course) - which means we're probably dealing with Brainfuck. Since we can assume that this program, when run, will print out the flag all we need to do is use a [Brainfuck text generator](https://copy.sh/brainfuck/text.html) to find out what our code *should* look like  and then begin matching and replacing characters. I entered "HackTrinity{" into the generator and got the following:
 
 `-[------->+<]>-.[--->++++<]>+ ...`
 
@@ -548,7 +548,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-Using the *"SSRF"* hint, as well as the fact that the forum uses phpBB I did a bit of research to see if there were any big vulnerabilities out there: [bingo](https://vuldb.com/?id.111233)!
+Using the *"SSRF"* hint, as well as the fact that the forum uses [phpBB](https://www.phpbb.com/) I did a bit of research to see if there were any big vulnerabilities out there: [bingo](https://vuldb.com/?id.111233)!
 
 If we create an account via the forum and go to our profile page we can see that the forum allows us to specify a remote avatar:
 
@@ -567,7 +567,7 @@ I created a web server that contained a page with the following PHP code:
 ?>
 ```
 
-If we make this URL look like an image file http://myserver.com/log.php?i=image.png` and then set it as our remote avatar then we'll find the hidden service's IP address in the file `log.txt`:
+If we make this URL look like an image file http://not.my.server/log.php?i=image.png` and then set it as our remote avatar then we'll find the hidden service's IP address in the file `log.txt`:
 
 `95.179.146.250`
 
@@ -607,7 +607,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 Unfortunately I didn't manage to solve *Piconvert*, *Trinity Ball 2*, *PHPOurAdmin* or *Denovo 4*.
 
-For *Piconvert* I spent a long time trying to implement a reverse shell by exploiting the ImageTragick vulnerability. However, while I could get the exploit to work in simple ways, I wasn't able to get the reverse shell to connect :(
+For *Piconvert* I spent a long time trying to implement a reverse shell by exploiting the [ImageTragick](https://imagetragick.com/) vulnerability. However, while I could get the exploit to work in simple ways, I wasn't able to get the reverse shell to connect :(
 
 For *Denovo 4* I used a tool called sysdig as a workaround for not being able to debug the program itself (using gdb, ltrace, etc). I spent a few hours trying to make heads or tails of the data log and erroneously thought I'd found the serial key. The one I found began with *"AHACRY-BB..."* but didn't work, sadly.
 
