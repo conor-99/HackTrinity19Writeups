@@ -1,6 +1,6 @@
 # Hack Trinity '19 Writeups
 
-I had a lot of fun participating in the [Hack Trinity '19 CTF](https://hacktrinity.me/) competition this month. It was  my first time every trying anything like this so I wasn't at all prepared and I had to learn a lot of new skills on-the-fly. Nonetheless, I was fairly pleased with my result and I'll definitely be competing again next year!
+I had a lot of fun participating in the [Hack Trinity '19 CTF](https://hacktrinity.me/) competition this year. It was my first time ever trying anything like this so I wasn't at all prepared and I had to learn a lot of new skills on-the-fly. Nonetheless, I was fairly pleased with my result and I'll definitely be competing again next year!
 
 Here are some brief writeups for the challenges I managed to solve:
 
@@ -470,7 +470,7 @@ Once we've got Ettercap running we can open up Wireshark and begin listening. Su
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`forensics` | `184` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
+`forensics` | `184` | ![Hard](https://img.shields.io/badge/-Hard-orange.svg)
 
 #### Challenge:
 
@@ -478,15 +478,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-If we run a `binwalk` on the archive it doesn't look at all suspicious. If we extract strings we'll find the name of the file inside: `flag.txt`. However, we can't access the this file because the archive's corrupted.
-
-I moved over to Windows and tried to run the WinRar recovery tool on the archive, but to no avail.
-
-After a bit of investigation I discovered that the header at the start of the archive was incorrect. (to-do)
-
-By changing the appropriate bytes in a hex editor we can fix the archive and extract our flag:
-
-`flag`
+To-do.
 
 ### Flow
 
