@@ -38,7 +38,7 @@ Here are some brief writeups for the challenges I managed to solve:
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`intro` | `50` | `Very Easy`
+`intro` | `50` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
 #### Challenge::
 
@@ -55,7 +55,7 @@ Simple enough. Free points.
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`intro` | `75` | `Very Easy`
+`intro` | `75` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
 #### Challenge::
 
@@ -70,7 +70,7 @@ Another simple one - no need for an explanation here.
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`misc` | `77` | `Very Easy`
+`misc` | `77` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
 #### Challenge::
 
@@ -162,7 +162,7 @@ This challenge took me way longer than it should have ...
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`darkweb/recon` | `113` | `Very Easy`
+`darkweb/recon` | `113` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
 #### Challenge::
 
@@ -199,7 +199,7 @@ And that's our flag!
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`web` | `119` | `Very Easy`
+`web` | `119` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
 #### Challenge::
 
@@ -323,7 +323,7 @@ Due to the hint, I spent quite a while trying to find the flag via Facebook (sin
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`misc` | `150` | `Very Easy`
+`misc` | `150` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
 #### Challenge:
 
