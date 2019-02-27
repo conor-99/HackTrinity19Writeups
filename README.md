@@ -39,8 +39,8 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 	If you've never played a Capture-The-Flag competition before, worry not!
 	The aim of the game is to find a string of text called a flag
-	Usually the flag will be in the form `HackTrinity{}`, but sometimes it can be a different piece of text
-	To receive a free 50 points, enter `HackTrinity{well_that_was_a_freebie}` in the box below, and click Check.
+	Usually the flag will be in the form HackTrinity{}, but sometimes it can be a different piece of text
+	To receive a free 50 points, enter HackTrinity{well_that_was_a_freebie} in the box below, and click Check.
 
 #### Solution:
 
@@ -54,9 +54,8 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Challenge:
 
-> Oooh, we Trinity students love our rules and procedures.
-
-> We love them so much we included a flag in the rules for this competition. Can you find it?
+	Oooh, we Trinity students love our rules and procedures.
+	We love them so much we included a flag in the rules for this competition. Can you find it?
 
 #### Solution:
 
@@ -70,7 +69,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Challenge:
 
-> What's our real Twitter handle?
+	What's our real Twitter handle?
 
 #### Solution:
 
@@ -84,13 +83,10 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Challenge:
 
-> Denovo is a new startup which develops DRM for games.
-
-> Version 1 is to be released soon, and you've been called in to test its effectiveness...
-
-> Note: Denovo have decided that serial keys for v1 and all future versions look like "XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX", where 'X' is a capital letter.
-
-> Both binaries below are generated from the same code, one is built for ARM platforms and one for x86-64. You can choose whichever you're most comfortable with :)
+	Denovo is a new startup which develops DRM for games.
+	Version 1 is to be released soon, and you've been called in to test its effectiveness...
+	Note: Denovo have decided that serial keys for v1 and all future versions look like "XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX", where 'X' is a capital letter.
+	Both binaries below are generated from the same code, one is built for ARM platforms and one for x86-64. You can choose whichever you're most comfortable with :)
 
 #### Solution:
 
@@ -134,9 +130,8 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Challenge:
 
-> TCD Disinformation Services have been hard at work making sure that any flag-containing media is fully censored.
-
-> Apparently one slipped through... Can you find it?
+	TCD Disinformation Services have been hard at work making sure that any flag-containing media is fully censored.
+	Apparently one slipped through... Can you find it?
 
 #### Solution:
 
@@ -164,9 +159,8 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Challenge:
 
-> Oh noes! Someone's stole the Book of Kells and is auctioning it off on the Dark Web!
-
-> Download the Tor Browser and visit the auction site at http://uxpkyayer253dtcl.onion to find out who's been making bids on this Trinity treasure :O
+	Oh noes! Someone's stole the Book of Kells and is auctioning it off on the Dark Web!
+	Download the Tor Browser and visit the auction site at http://uxpkyayer253dtcl.onion to find out who's been making bids on this Trinity treasure :O
 
 #### Solution:
 
@@ -182,7 +176,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Challenge:
 
- > The Luas website has been hacked again, and a threatening ransom message posted. Can you track down the culprit's real full name? https://luas.hacktrinity.me 
+ 	The Luas website has been hacked again, and a threatening ransom message posted. Can you track down the culprit's real full name? https://luas.hacktrinity.me 
 
 #### Solution:
 
@@ -202,9 +196,8 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Challenge:
 
-> Tickets for Trinity Ball have finally been released! Due to high demand, the organisers have limited tickets to one per person. Can you bypass the restrictions and checkout two tickets at once?
-
-> https://trinityball1.hacktrinity.me
+	Tickets for Trinity Ball have finally been released! Due to high demand, the organisers have limited tickets to one per person. Can you bypass the restrictions and checkout two tickets at once?
+	https://trinityball1.hacktrinity.me
 
 #### Solution:
 
@@ -232,13 +225,12 @@ If we proceed to the checkout we'll be awarded our flag:
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`networking` | `120` | Easy (although setting up can be tricky)
+`networking` | `120` | Medium
 
 #### Challenge
 
-> Each challenge has a dedicated OpenVPN server ... (instructions for setting up OpenVPN, etc) ... that challenge will be destroyed (and re-created next time you connect).
-
-> Once you're all set up, this challenge should be fairly easy: you should be able to nmap your allocated subnet to find a web server hosting the flag.
+	Each challenge has a dedicated OpenVPN server ... (instructions for setting up OpenVPN, etc) ... that challenge will be destroyed (and re-created next time you connect).
+	Once you're all set up, this challenge should be fairly easy: you should be able to nmap your allocated subnet to find a web server hosting the flag.
 
 #### Solution
 
@@ -267,4 +259,190 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Challenge
 
-> Apparently the flag is in the file hidden.txt but I can't find it, good luck to you!
+	Apparently the flag is in the file hidden.txt but I can't find it, good luck to you!
+
+#### Solution
+
+If we open the file in Vim we can see a number of suspicious looking characters:
+
+`img here`
+
+These characters include ,  and .
+
+By quickly Googling "... steganography" I found a [handy tool](https://330k.github.io/misc_tools/unicode_steganography.html) to decode the file.
+
+If we paste in the text from the file and click decode we get our flag:
+
+`flag`
+
+## GNU
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`networking` | `130` | Medium
+
+#### Challenge
+
+	You should really listen a bit more.
+
+#### Solution
+
+This is another OpenVPN challenge so we can just repeat the steps from 'Welcome' when setting up.
+
+The challenge statement made it clear that we'd need to listen to the traffic on our VPN interface. If we open up Wireshark and start listening to the `tap0` interface set up by OpenVPN we'll quickly find our flag:
+
+`img here`
+
+## Who Am I?
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`recon` | `143` | Medium
+
+#### Challenge
+
+	We discovered a GSM audio bug in the president's office. Our counter-surveillance techs have determined that the bug was setup to phone home to +353 89 490 9392. We suspect this number is probably the personal phone number of one of the bad people involved (they're not very smart). Can you use your open-source intelligence gathering skills to discover the real-life identity of the owner of this phone?
+	Hint: they use a service used by >1 billion other people
+
+#### Solution
+
+Due to the hint, I spent quite a while trying to find the flag via Facebook (since the phone number appeared to be registered there). However, if we try to find the phone number on WhatsApp we'll quickly find the flag hidden in the user's profile picture:
+
+`img here`
+
+## Brew
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`misc` | `150` | Very Easy
+
+#### Challenge
+
+	I was trawling through my email the other day to see if I could find any flags and I found a message with this file in my spam box.
+	The subject line claimed "FLAG WITHIN!", but I can't make any sense of it.
+
+#### Solution
+
+The attached file was of the type `cia`. Since I already had the 3DS emulator Citra installed on my laptop this gave the entire thing away. By opening the file in Citra we can get our flag:
+
+![Lenny](images/11_brw_1.png)
+
+This challenge was quite fun!
+
+## Denovo 2
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`reversing` | `175` | Medium
+
+#### Challenge
+
+	After Denovo v1 was released into the wild (despite your warnings) and cracks for the protected games appeared online within the hour, the engineers went back to the drawing board.
+	Now they're ready to release Denovo v2. Apparently the new version makes use of a proprietary encryption solution which is UNCRACKABLE. Can you take a look?
+	Both binaries below are generated from the same code, one is built for ARM platforms and one for x86-64. You can choose whichever you're most comfortable with :)
+
+#### Solution
+
+Once again, I downloaded the x86-64 version. I repeated the steps from 'Denovo 1' and found the following data in the `hexdump` output:
+
+`img here`
+
+... to-do
+
+## Turing-Lang
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`programming` | `179` | Easy
+
+#### Challenge
+
+	My friend Urban Turing made a new language and he claims that it is Turing complete, can you run the program he has written in this new language? 
+
+#### Solution
+
+The name Urban Turing must be a reference to Urban Müller - which means we're probably dealing with Brainfuck.
+
+## Big Chungus+3
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`programming` | `180` | Easy
+
+#### Challenge
+
+	Some normie sent you some strange code, can you find out how to run it?
+
+#### Solution
+
+Like the previous challenge, we're dealing with Brainfuck. We do another word replacement and run our code through an online compiler:
+
+`flag`
+
+## Wise
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`networking` | `180` | Hard
+
+#### Challenge
+
+	Hey, it's rude to eavesdrop!
+
+
+#### Solution
+
+We setup OpenVPN as before and start scanning with nmap. There are two additional hosts up:
+
+`img here`
+
+Based on the problem statement, as well as the suggestive number of hosts, we can probably assume we've got to implement some sort of man-in-the-middle attack.
+
+I hadn't a clue how to do this so I did some Googling and found out about Ettercap. It was already installed on my Kali maching so I opened it up.
+
+to-do
+
+...
+
+Once we've got Ettercap running we can open up Wireshark and begin listening. Sure enough, there's our flag, as well as a conversation that I spent way too much time listening to:
+
+`img here`
+
+## Zippy
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`forensics` | `184` | Medium
+
+#### Challenge
+
+	This zip file seems to be corrupted, any chance you could recover the flag inside?
+
+#### Solution
+
+If we run a `binwalk` on the archive it doesn't look at all suspicious. If we extract strings we'll find the name of the file inside: `flag.txt`. However, we can't access the this file because the archive's corrupted.
+
+I moved over to Windows and tried to run the WinRar recovery tool on the archive, but to no avail.
+
+After a bit of investigation I discovered that the header at the start of the archive was actually `00 .. 00`, the header for a `.jar` file, and not `00 .. 00`, the header for a `.zip` file!.
+
+By changing the appropriate bytes in a hex editor we can fix the archive and extract our flag:
+
+`flag`
+
+## Flow
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`exploit` | `191` | Hard
+
+#### Challenge
+
+	I set up a server so I can check on the flag for this challenge.
+	You can find it at ht3.hacktrinity.me:1337 (to connect using netcat, run nc ht3.hacktrinity.me 1337)
+	Don't worry, it's password-protected, so you won't be able to get it.
+	Here's the program running on the server (not that it'll help you since I've replaced the password and flag with rubbish):
+
+#### Solution
+
+This was one was really fun!
