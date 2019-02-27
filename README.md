@@ -489,7 +489,7 @@ If we run a `binwalk` on the archive it doesn't look at all suspicious. If we ex
 
 I moved over to Windows and tried to run the WinRar recovery tool on the archive, but to no avail.
 
-After a bit of investigation I discovered that the header at the start of the archive was actually `00 .. 00`, the header for a `.jar` file, and not `00 .. 00`, the header for a `.zip` file!
+After a bit of investigation I discovered that the header at the start of the archive was actually `50 4B 03 04 2D 00 00 00`, the header for a `.jar` file, and not `00 .. 00`, the header for a `.zip` file!
 
 By changing the appropriate bytes in a hex editor we can fix the archive and extract our flag:
 
@@ -546,15 +546,13 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 I spent a long time trying to mount the image and bricked a USB in the process - I didn't get anywhere with that endeavour.
 
-Then I ran the following command `strings disk.img | awk 'length($0) > 10'` and searched the output for the word *"flag"*.
-
-I found this: `flag.png`!
+Then I ran the following command `strings disk.img | awk '$0 ~ /flag/'` and found this: `flag.png`!
 
 I used the forensics tool Foremost to extract all `.png` files from the disk image: `foremost -t png -i disk.img`
 
 In the output folder was the image containing our flag:
 
-`img here`
+![Not Forgotten](images/notforgotten.png)
 
 ### Book of Kells 2
 
