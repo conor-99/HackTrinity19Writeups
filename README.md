@@ -37,13 +37,10 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Challenge:
 
-> If you've never played a Capture-The-Flag competition before, worry not!
-
-> The aim of the game is to find a string of text called a flag
-
-> Usually the flag will be in the form `HackTrinity{}`, but sometimes it can be a different piece of text
-
-> To receive a free 50 points, enter `HackTrinity{well_that_was_a_freebie}` in the box below, and click Check.
+	If you've never played a Capture-The-Flag competition before, worry not!
+	The aim of the game is to find a string of text called a flag
+	Usually the flag will be in the form `HackTrinity{}`, but sometimes it can be a different piece of text
+	To receive a free 50 points, enter `HackTrinity{well_that_was_a_freebie}` in the box below, and click Check.
 
 #### Solution:
 
@@ -230,3 +227,44 @@ If we try and make the following request `https://trinityball1.hacktrinity.me/ad
 If we proceed to the checkout we'll be awarded our flag:
 
 `HackTrinity{client_side_is_best_side}`
+
+## Welcome
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`networking` | `120` | Easy (although setting up can be tricky)
+
+#### Challenge
+
+> Each challenge has a dedicated OpenVPN server ... (instructions for setting up OpenVPN, etc) ... that challenge will be destroyed (and re-created next time you connect).
+
+> Once you're all set up, this challenge should be fairly easy: you should be able to nmap your allocated subnet to find a web server hosting the flag.
+
+#### Solution
+
+If we install OpenVPN, download the config file and follow the setup instructions closely then we should be able to get connected easily enough.
+
+We can find the IP we need to scan as well as our allocated subnet by running `ifconfig`:
+
+`img here`
+
+Using a [subnet calculator](http://www.subnet-calculator.com/) we can convert the `255.255.255.240` into `28` mask  bits.
+
+Now we can run our scan using nmap `nmap -v -sn 10.0.0.0/28`:
+
+`img here`
+
+If we visit the resulting IP we'll find a web page containing our flag:
+
+`flag`
+
+
+## Dust in your eyes?
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`crypto/steganography` | `121` | Easy
+
+#### Challenge
+
+> Apparently the flag is in the file hidden.txt but I can't find it, good luck to you!
