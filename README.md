@@ -99,35 +99,38 @@ On to the real problems. I chose the x86-64 binary because I can execute it on m
 
 I quickly executed it to see how the program worked:
 
-// img here
+![Denovo 1](images/denovo1_1.png)
 
 I then extracted all of the relatively long strings from the binary using the following command:
 
 `strings denovo_v1 | awk 'length($0) > 10'`
 
-Among the output was this string: `//text here`
+There were a number of strings relating to input and ouput such as `please enter your serial key`, etc.
 
-I ran a `hexdump` on the binary and could see that there was what appeared to be an encoded serial key just before the beginning of the flag.
+I ran a `hexdump` on the binary and found the start of the section relating to input and output:
 
-`//here`
+![Denovo 1](images/denovo1_2.png)
 
-At this point I probably should've disassembled the binary and tried to find the method used to encode the serial key but instead I just did a quick check by hand.
+There is a curious pattern of `Z`s right before the regular text begins: six character followed by a `Z` followed by six more characters. The `Z`s must be the encoded form of the hyphens!
 
-We know that every seventh character in the serial key is a hyphen as they are in the form `XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX`. Since, every seventh character in the encoded key is a `0x??` and the ASCII code for `-` is `0x??`then we can immediately see that each character in the key has simply been shifted right by a single bit.
+Since the ASCII code for `Z` is `0x5A` and the ASCII code for `-` is `0x2D` then in order to decode the data we simply perform one binary shift right on each character.
 
 All that was left to do was throw together a quick Python script and decode the key:
 
 ```python
-k = "\x00\x00"
-o = ""
-for c in k:
-	out += c << 1
-print o
+k = [
+	0x96,0x9e,0x86,0xb0,0xb4,0x8c,0x5a,
+	0xac,0x88,0x96,0xaa,0x94,0xae,0x5a,
+	0x88,0x9c,0xa4,0x86,0xac,0x8a,0x5a,
+	0x8c,0x9c,0x8e,0x9c,0xa8,0xb4,0x5a,
+	0xb0,0xb4,0x86,0x8e,0xac,0xb0
+]
+print "".join([chr(c >> 1) for c in k])
 ```
 
-This gives us `//here`. If we execute the program and enter this key we receive our flag:
+This gives us `KOCXZF-VDKUJW-DNRCVE-FNGNTZ-XZCGVX`. If we execute the program and enter this key we're asked to enter a number between 1-100, once we guess the number we receive our flag:
 
-`here`
+`HackTrinity{n0_drm_1s_uNBreAkable}`
 
 ### Bunny
 
