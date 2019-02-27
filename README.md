@@ -84,7 +84,7 @@ The last of the "zero-effort" problems, kind of.
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`reversing` | `100` | `Easy`
+`reversing` | `100` | ![Easy](https://img.shields.io/badge/-Easy-green.svg)
 
 #### Challenge::
 
@@ -133,7 +133,7 @@ This gives us `//here`. If we execute the program and enter this key we receive 
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`forensics` | `100` | `Medium`
+`forensics` | `100` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
 
 #### Challenge::
 
@@ -179,7 +179,7 @@ This was a simple one. If we visit the hidden service and go to the only thread 
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`blockchain/recon` | `114` | `Easy`
+`blockchain/recon` | `114` | ![Easy](https://img.shields.io/badge/-Easy-green.svg)
 
 #### Challenge::
 
@@ -234,7 +234,7 @@ If we proceed to the checkout we'll be awarded our flag:
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`networking` | `120` | `Medium`
+`networking` | `120` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
 
 #### Challenge:
 
@@ -264,7 +264,7 @@ If we visit the resulting IP we'll find a web page containing our flag:
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`crypto/steganography` | `121` | `Easy`
+`crypto/steganography` | `121` | ![Easy](https://img.shields.io/badge/-Easy-green.svg)
 
 #### Challenge:
 
@@ -288,7 +288,7 @@ If we paste in the text from the file and click decode we get our flag:
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`networking` | `130` | `Medium`
+`networking` | `130` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
 
 #### Challenge:
 
@@ -306,7 +306,7 @@ The challenge statement made it clear that we'd need to listen to the traffic on
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`recon` | `143` | `Medium`
+`recon` | `143` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
 
 #### Challenge:
 
@@ -342,7 +342,7 @@ This challenge was quite fun!
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`reversing` | `175` | `Medium`
+`reversing` | `175` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
 
 #### Challenge:
 
@@ -362,7 +362,7 @@ Once again, I downloaded the x86-64 version. I repeated the steps from 'Denovo 1
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`programming` | `179` | `Easy`
+`programming` | `179` | ![Easy](https://img.shields.io/badge/-Easy-green.svg)
 
 #### Challenge:
 
@@ -399,7 +399,7 @@ Which gives us:
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`programming` | `180` | `Easy`
+`programming` | `180` | ![Easy](https://img.shields.io/badge/-Easy-green.svg)
 
 #### Challenge:
 
@@ -425,7 +425,7 @@ Remove all whitespace and then run our code through an online compiler:
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`networking` | `180` | `Hard`
+`networking` | `180` | ![Hard](https://img.shields.io/badge/-Hard-orange.svg)
 
 #### Challenge:
 
@@ -454,7 +454,7 @@ Once we've got Ettercap running we can open up Wireshark and begin listening. Su
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`forensics` | `184` | `Medium`
+`forensics` | `184` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
 
 #### Challenge:
 
@@ -476,7 +476,7 @@ By changing the appropriate bytes in a hex editor we can fix the archive and ext
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`exploit` | `191` | `Hard`
+`exploit` | `191` | ![Hard](https://img.shields.io/badge/-Hard-orange.svg)
 
 #### Challenge:
 
@@ -493,7 +493,7 @@ This was one was really fun!
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`phreaking` | `217` | `Medium`
+`phreaking` | `217` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
 
 #### Challenge:
 
@@ -511,7 +511,7 @@ To solve this one you simply needed to use a VoIP app to call the provided numbe
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`forensics` | `231` | `Hard`
+`forensics` | `231` | ![Hard](https://img.shields.io/badge/-Hard-orange.svg)
 
 #### Challenge:
 
@@ -537,7 +537,7 @@ In the output folder was the image containing our flag:
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`darkweb/forensics` | `237` | `Medium`
+`darkweb/forensics` | `237` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
 
 #### Challenge:
 
@@ -573,7 +573,7 @@ If we make this URL look like an image file http://myserver.com/log.php?i=image.
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`networking` | `283` | `Hard`
+`networking` | `283` | ![Hard](https://img.shields.io/badge/-Hard-orange.svg)
 
 #### Challenge:
 
@@ -589,7 +589,7 @@ Once again we carry out the standard OpenVPN setup and run an nmap scan.
 
 Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
-`reversing` | `300` | `Very Hard`
+`reversing` | `300` | ![Very Hard](https://img.shields.io/badge/-Very Hard-red.svg)
 
 #### Challenge:
 
