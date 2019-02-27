@@ -78,7 +78,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-The last of the "zero-effort" problems, kind of.
+The last of the *"zero-effort"* problems.
 
 ###  Denovo 1
 
