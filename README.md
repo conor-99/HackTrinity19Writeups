@@ -4,6 +4,8 @@ I had a lot of fun participating in the [Hack Trinity '19 CTF](https://hacktrini
 
 Here are some brief writeups for the challenges I managed to solve:
 
+**Note:** the writeups for *Welcome*, *GNU*, *Wise*, *Flow* and *Nat a flag* aren't very in-depth or extensive as the networking services used to solve the problems appear to have been closed down so I can't replicate the solutions.
+
 * [Solved Problems](#solved-problems)
 	* [Welcome to Hack Trinity](#welcome-to-hack-trinity)
 	* [RTFR](#rtfr)
@@ -476,15 +478,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-If we run a `binwalk` on the archive it doesn't look at all suspicious. If we extract strings we'll find the name of the file inside: `flag.txt`. However, we can't access the this file because the archive's corrupted.
-
-I moved over to Windows and tried to run the WinRar recovery tool on the archive, but to no avail.
-
-After a bit of investigation I discovered that the header at the start of the archive was actually `50 4B 03 04 2D 00 00 00`, the header for a `.jar` file, and not `00 .. 00`, the header for a `.zip` file!
-
-By changing the appropriate bytes in a hex editor we can fix the archive and extract our flag:
-
-`flag`
+To-do.
 
 ### Flow
 
@@ -501,7 +495,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-This was one was really fun!
+To-do.
 
 ### Call me maybe
 
