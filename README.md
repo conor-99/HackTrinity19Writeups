@@ -478,7 +478,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 #### Solution:
 
-To-do.
+**To-do:** finish writeup.
 
 ### Flow
 
