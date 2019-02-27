@@ -277,15 +277,15 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 If we open the file in a text editor we can see a number of suspicious looking characters:
 
-`img here`
+![Dust in your eyes?](images/dustinyoureyes.png)
 
-These characters include ,  and .
+These characters include `U+200C` (zero width non-joiner), `U+200D` (zero width joiner) and `U+202C` (pop directional formatting).
 
-By quickly Googling "... steganography" I found a [handy tool](https://330k.github.io/misc_tools/unicode_steganography.html) to decode the file.
+By quickly Googling "zero width steganography" I found a [handy tool](https://330k.github.io/misc_tools/unicode_steganography.html) to decode the file.
 
 If we paste in the text from the file and click decode we get our flag:
 
-`flag`
+`HackTrinity{clean your glasses}`
 
 ### GNU
 
@@ -357,9 +357,29 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 Once again, I downloaded the x86-64 version. I repeated the steps from *Denovo 1* and found the following data in the `hexdump` output:
 
-`img here`
+![Denovo 2](images/denovo2.png)
 
-... to-do
+In between `HackTrinity{` and `[0;34m[denovo]` there's a weird stream of characters. It's too long to be a serial key so maybe it's our flag. We can assume that the first character `0x1B` corresponds to the `H` in *"HackTrinity"* (`0x48`).
+
+The most obvious binary operation that will convert `0x1B` to `0x48` is an XOR, especially considering how popular XOR is in encryption. To get `0x48` as a result we would need to XOR `0x1B` with `0x53`.
+
+We can write another simple Python script to decode the flag:
+
+```python
+k = [
+	0x1b, 0x32, 0x30, 0x38, 0x07, 0x21, 0x3a,
+	0x3d, 0x3a, 0x27, 0x2a, 0x28, 0x3b, 0x63,
+	0x24, 0x0c, 0x37, 0x3c, 0x0c, 0x62, 0x0c,
+	0x38, 0x3d, 0x1c, 0x24, 0x0c, 0x27, 0x3b,
+	0x60, 0x0c, 0x35, 0x3f, 0x13, 0x34, 0x0c,
+	0x62, 0x20, 0x0c, 0x21, 0x62, 0x14, 0x3b,
+	0x27, 0x2e
+]
+print "".join([chr(c ^ 0x53) for c in k])
+```
+
+The flag is: `HackTrinity{h0w_do_1_knOw_th3_fl@g_1s_r1Ght}`
+
 
 ### Turing-Lang
 
