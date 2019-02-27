@@ -317,7 +317,7 @@ Topic(s) | Points | Difficulty (in my opinion)
 
 Due to the hint, I spent quite a while trying to find the flag via Facebook (since the phone number appeared to be registered there). However, if we try to find the phone number on WhatsApp we'll quickly find the flag hidden in the user's profile picture:
 
-`img here`
+![Who Am I?](images/whoami.png)
 
 ### Brew
 
