@@ -40,14 +40,14 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `intro` | `50` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
-#### Challenge::
+#### Challenge:
 
 	If you've never played a Capture-The-Flag competition before, worry not!
 	The aim of the game is to find a string of text called a flag
 	Usually the flag will be in the form HackTrinity{}, but sometimes it can be a different piece of text
 	To receive a free 50 points, enter HackTrinity{well_that_was_a_freebie} in the box below, and click Check.
 
-#### Solution::
+#### Solution:
 
 Simple enough. Free points.
 
@@ -57,12 +57,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `intro` | `75` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
-#### Challenge::
+#### Challenge:
 
 	Oooh, we Trinity students love our rules and procedures.
 	We love them so much we included a flag in the rules for this competition. Can you find it?
 
-#### Solution::
+#### Solution:
 
 Another simple one - no need for an explanation here.
 
@@ -72,11 +72,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `misc` | `77` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
-#### Challenge::
+#### Challenge:
 
 	What's our real Twitter handle?
 
-#### Solution::
+#### Solution:
 
 The last of the "zero-effort" problems, kind of.
 
@@ -86,14 +86,14 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `reversing` | `100` | ![Easy](https://img.shields.io/badge/-Easy-green.svg)
 
-#### Challenge::
+#### Challenge:
 
 	Denovo is a new startup which develops DRM for games.
 	Version 1 is to be released soon, and you've been called in to test its effectiveness...
 	Note: Denovo have decided that serial keys for v1 and all future versions look like "XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX", where 'X' is a capital letter.
 	Both binaries below are generated from the same code, one is built for ARM platforms and one for x86-64. You can choose whichever you're most comfortable with :)
 
-#### Solution::
+#### Solution:
 
 On to the real problems. I chose the x86-64 binary because I can execute it on my machine.
 
@@ -135,12 +135,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `forensics` | `100` | ![Medium](https://img.shields.io/badge/-Medium-yellow.svg)
 
-#### Challenge::
+#### Challenge:
 
 	TCD Disinformation Services have been hard at work making sure that any flag-containing media is fully censored.
 	Apparently one slipped through... Can you find it?
 
-#### Solution::
+#### Solution:
 
 The reason I've given this challenge a difficulty of 'medium' rather than 'easy' is because of the sheer amount of time I spent trying to use steganography and other techniques to search for the flag.
 
@@ -164,12 +164,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `darkweb/recon` | `113` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
-#### Challenge::
+#### Challenge:
 
 	Oh noes! Someone's stole the Book of Kells and is auctioning it off on the Dark Web!
 	Download the Tor Browser and visit the auction site at http://uxpkyayer253dtcl.onion to find out who's been making bids on this Trinity treasure :O
 
-#### Solution::
+#### Solution:
 
 This was a simple one. If we visit the hidden service and go to the only thread on the forum we'll find the flag sitting at the bottom:
 
@@ -181,11 +181,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `blockchain/recon` | `114` | ![Easy](https://img.shields.io/badge/-Easy-green.svg)
 
-#### Challenge::
+#### Challenge:
 
  	The Luas website has been hacked again, and a threatening ransom message posted. Can you track down the culprit's real full name? https://luas.hacktrinity.me 
 
-#### Solution::
+#### Solution:
 
 Visiting the website gives us this Zcash address: `t1gok64PM8APnrSWXgBxboqHrszFYqP5v3L`.
 
@@ -201,12 +201,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `web` | `119` | ![Very Easy](https://img.shields.io/badge/-Very%20Easy-brightgreen.svg)
 
-#### Challenge::
+#### Challenge:
 
 	Tickets for Trinity Ball have finally been released! Due to high demand, the organisers have limited tickets to one per person. Can you bypass the restrictions and checkout two tickets at once?
 	https://trinityball1.hacktrinity.me
 
-#### Solution::
+#### Solution:
 
 If we visit the page and click the button we'll be taken to an order page:
 
